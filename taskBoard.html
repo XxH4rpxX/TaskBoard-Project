@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskBoard</title>
+  <link rel="stylesheet" href="./styles/global.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1>TaskBoard</h1>
+      <div class="user-controls">
+        <span></span>
+        <button id="logoutButton">Logout</button>
+        <label class="switch">
+          <input type="checkbox" id="themeToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="board-selector">
+      <select id="boardSelect">
+        <option value="">Selecionar Board</option>
+      </select>
+    </div>
+
+    <section class="taskboard" id="taskboard">
+      
+    </section>
+
+    <button class="add-column-button" id="addColumn">Nova coluna</button>
+  </main>
+
+  <script type="module" src="./scripts/pages/taskBoard.js"></script>
+</body>
+</html>
