@@ -234,7 +234,7 @@ async function deleteColumn(columnId) {
 
     if (response.ok) {
       console.log("Coluna excluída com sucesso!");
-      boardSelect.dispatchEvent(new Event("change")); // Recarrega o quadro
+      boardSelect.dispatchEvent(new Event("change")); 
     } else {
       console.error("Erro ao excluir coluna:", await response.text());
     }
@@ -251,16 +251,16 @@ loadBoards();
 const logoutButton = document.getElementById("logoutButton");
 
 logoutButton.addEventListener("click", () => {
-  localStorage.clear(); // Clear local storage
-  sessionStorage.clear(); // Clear session storage
-  window.location.href = "./index.html"; // Redirect to login page
+  localStorage.clear(); 
+  sessionStorage.clear(); 
+  window.location.href = "./index.html"; 
 });
 
 
 const user = JSON.parse(localStorage.getItem("user"));
 
 if (!user || !user.email) {
-  window.location.href = "login.html"; // Redirect if not logged in
+  window.location.href = "login.html"; 
 } else {
   const userEmailElement = document.querySelector(".user-controls span");
   userEmailElement.textContent = user.email;
